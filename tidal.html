@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <!-- import the webpage's stylesheet -->
+  <link rel="stylesheet" href="tidal.css">
+  <title>Renewable and Alternative Energy Resources</title>
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <!--import tidal script-->
+  <script src="/script_tidal.js" defer></script>
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/string.min.js"></script>
+
+<nav id="nav" class="navbar navbar-expand-lg p-2 navbar-light bg-light rounded border" >
+  <figure  id="Navigation" class="navbar-brand font-weight-bold">Resources</figure>
+  <div class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+    <span class="navbar-toggler-icon"></span>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <br>
+      <button class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </button>
+      <button class="nav-item">
+        <a class="nav-link" href="tidal.html">Tidal Energy</a>
+      </button>
+    </ul>
+  </div>
+</nav>
+</head>
+
+<div style="background-color:lightblue">
+  <p style="color:lightblue">p</p>
+</div>
+<b>
+  <h1 align="center">Tidal Energy</h1>
+</b>
+<div style="background-color:lightblue">
+  <p style="color:lightblue">p</p>
+</div>
+
+<p>
+  There are two protocols in evaluating the available energy of a tidal pool.
+  The first protocol is based on a simple tidal pool where the discharge through the generator is rapid.
+</p>
+<p>
+  This is an ideal scenario for maximum power generation where the energy from a wave is discharged at a low-tide datum (bottom of pool).
+</p>
+<p>
+  The second protocol is more advanced. This protocol takes into account varied tides throughout the day.
+</p>
+  This is protocol takes into account the modulated flow and therefore, provides more stable energy to the grid.
+<p>
+</p>
+<form>
+  <div>
+    <input type="radio" id="choice1" name="protocol" value="protocol1">Protocol 1 Simple Tidal Pool<br>
+    <input type="radio" id="choice2" name="protocol" value="protocol2">Protocol 2 Varied Tidal Pool<br>
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+<br>
+<p>
+  Below is an example of a tidal energy generator. Fill out the fields below
+  to see the amount of energy available by a specific tidal pool. First pick a protocol.
+</p>
+<div id="log" class="boxed">
+  <div id="protocol_1"  style="display:none;">
+      <form>
+        <div>
+          <p>$$W_1 = \dfrac{1}{2}g{\rho}AR^2*$$</p>
+          <p>Input the tidal range or the difference of the high-level tide to low-level tide datum in (m).</p>
+          <input type="text" id="range" placeholder="tidal range"><br>
+          <p>Input the surface area of the tidal generator surface facing the tide in (m^2).</p>
+          <input type="text" id="surface_area" placeholder="surface area"><br>
+        </div>
+      </form>
+  </div>
+  <div id="protocol_2"  style="display:none;">
+      fields2
+  </div>
+</div>
+
+<br>
+<input type="button" onclick="generateResults()" value="Results" />
+<br>
+<b align="left" class="list-group" id="display"></b>
+<br>
+<footer>
+  <ol>Posted by: Kevin Hill</ol>
+  <ol>*All equations are referenced from Alternative Energy Systems and Applications</ol>
+  <ol>Hodge, B. K. (2017). Alternative energy systems and applications. Chichester, West Sussex: Wiley Blackwell.</ol>
+</footer>
+</html>

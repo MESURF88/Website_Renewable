@@ -1,0 +1,14 @@
+#log
+{
+    text-align:center;
+    justify-content:center;
+}
+#protocol_1, #protocol_2
+{
+    display:inline;
+}
+.boxed {
+  border: 1px solid green ;
+  font-family: "Courier New", monospace;
+  white-space: pre;
+}
