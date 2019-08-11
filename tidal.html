@@ -1,7 +1,12 @@
 <!DOCTYPE html>
+<!-- Author: Kevin Hill -->
+<!-- Program Name: Final Web Project -->
+<!-- Date: Aug 4 2019 -->
+<!-- Course: CS 290 -->
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- import the webpage's stylesheet -->
   <link rel="stylesheet" href="tidal.css">
   <title>Renewable and Alternative Energy Resources</title>
@@ -9,7 +14,7 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
   </script>
   <!--import tidal script-->
-  <script src="/script_tidal.js" defer></script>
+  <script src="script_tidal.js" defer></script>
   <script src="js/jquery-2.1.1.min.js"></script>
   <script src="js/string.min.js"></script>
 
@@ -22,10 +27,16 @@
     <ul class="navbar-nav">
       <br>
       <button class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="KevinsPage.html">Home <span class="sr-only">(current)</span></a>
       </button>
       <button class="nav-item">
         <a class="nav-link" href="tidal.html">Tidal Energy</a>
+      </button>
+	  <button class="nav-item">
+        <a class="nav-link" href="solar.html">Solar Energy</a>
+      </button>
+	  <button class="nav-item">
+        <a class="nav-link" href="wind.html">Wind Energy</a>
       </button>
     </ul>
   </div>
@@ -42,7 +53,8 @@
   <p style="color:lightblue">p</p>
 </div>
 
-<p>
+<!-- Webpage content -->
+<p id = "info">
   There are two protocols in evaluating the available energy of a tidal pool.
   The first protocol is based on a simple tidal pool where the discharge through the generator is rapid.
 </p>
@@ -82,14 +94,36 @@
       </form>
   </div>
   <div id="protocol_2"  style="display:none;">
-      fields2
+       <form>
+        <div>
+          <p>$$W_2 = \dfrac{1}{2}g{\rho}AR^2[0.06175*(cos(\dfrac{\pi*t1}{6.2083})-cos(\dfrac{\pi*t2}{6.2083}))-0.002*(t2^2-t1^2)]*$$</p>
+          <p>Input the tidal range or the difference of the high-level tide to low-level tide datum in (m).</p>
+          <input type="text" id="range2" placeholder="tidal range"><br>
+          <p>Input the surface area of the tidal generator surface facing the tide in (m^2).</p>
+          <input type="text" id="surface_area2" placeholder="surface area"><br>
+		  <p>Input the first hour generation is initiated (h).</p>
+          <select id="time_1" placeholder="time 1">
+		    <option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			</select><br>
+		  <p>Input the second hour generation when stopped (h).</p>
+          <select id="time_2" placeholder="time 2">
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			</select><br>
+        </div>
+      </form>
   </div>
 </div>
 
 <br>
 <input type="button" onclick="generateResults()" value="Results" />
 <br>
-<b align="left" class="list-group" id="display"></b>
+<b id="output"> </b>
+<br>
 <br>
 <footer>
   <ol>Posted by: Kevin Hill</ol>

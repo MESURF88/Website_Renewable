@@ -1,0 +1,7 @@
+#panel_show {
+  margin:20px;
+  height: 175px;
+  width: 200px;
+  background-color: coral;
+  display: none;
+}

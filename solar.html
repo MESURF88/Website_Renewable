@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- Author: Kevin Hill -->
+<!-- Program Name: Final Web Project -->
+<!-- Date: Aug 4 2019 -->
+<!-- Course: CS 290 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- import the webpage's stylesheet -->
+  <link rel="stylesheet" href="solar.css">
+  <title>Renewable and Alternative Energy Resources</title>
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <!--import solar script-->
+  <script src="script_solar.js" defer></script>
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/string.min.js"></script>
+
+<nav id="nav" class="navbar navbar-expand-lg p-2 navbar-light bg-light rounded border" >
+  <figure  id="Navigation" class="navbar-brand font-weight-bold">Resources</figure>
+  <div class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+    <span class="navbar-toggler-icon"></span>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <br>
+      <button class="nav-item active">
+        <a class="nav-link" href="KevinsPage.html">Home <span class="sr-only">(current)</span></a>
+      </button>
+      <button class="nav-item">
+        <a class="nav-link" href="tidal.html">Tidal Energy</a>
+      </button>
+	  <button class="nav-item">
+        <a class="nav-link" href="solar.html">Solar Energy</a>
+      </button>
+	  <button class="nav-item">
+        <a class="nav-link" href="wind.html">Wind Energy</a>
+      </button>
+    </ul>
+  </div>
+</nav>
+</head>
+
+<div style="background-color:orange">
+  <p style="color:orange">p</p>
+</div>
+<b>
+  <h1 align="center">Solar Energy</h1>
+</b>
+<div style="background-color:orange">
+  <p style="color:orange">p</p>
+</div>
+
+<!-- Webpage content -->
+<p>
+  There are many parameters necessary to calculate the solar energy available to a solar energy area.
+</p>
+<p>
+  There are various factors that need to be determined before the calculation of solar energy in a day can occur.
+  First the solar profile needs to be chosen for a specific location.
+</p>
+   <form>
+		<legend>Enter the latitude and longitude of a city:</legend>
+		<p>
+		Common city latitudes and longitudes.
+		</p>
+		<p>
+		Portland lat: 45 lon: -123.	Houston lat: 30 lon: -95.	New York lat: 41 lon: -74.  Las Vegas lat: 36 lon: -115.
+		</p>
+			<br />
+			<label id = "zip">Enter latitude:
+				<input type="number" id="lat_input" size="30" maxlength="100">
+			</label>
+			<br />
+			<label id = "city">Enter longitude:
+				<input type="number" id="lon_input" size="30" maxlength="100">
+			</label>
+
+	</form>
+	<button onclick="select()">Push Input</button>
+	<br>
+	<p id="show_avg"></p>
+	<p id="error_out"></p>
+	
+<p>
+  Once a solar profile within a specific area is picked. The energy from the number of solar panels can be calculated.
+</p>
+<!--information and assumptions shown once submitted location-->
+<p id="degrees"></p>
+<p id="months1"></p>
+<p id="months2"></p>
+<div id="monthly_avg"></div>
+
+<br>
+
+<h3>Solar Panel Array Results and Visualizer </h3>
+
+<p>
+  Choose the number of (2 square meter) panels to be created to determine the energy avaiable for a day and year.
+</p>
+<p>Input the number of solar panels analyzing form the picklist below.</p>
+	<select id="panel_num">
+		<option value="1">1</option>
+		<option value="2">4</option>
+		<option value="4">16</option>
+		<option value="9">81</option>
+		<option value="16">256</option>
+		<option value="25">625</option>
+	</select><br>
+
+<br>
+<input type="button" onclick="showResults()" value="Results"/>
+<br>
+<br>
+
+<div id="panel_show">
+ <table id="tbl">
+</table> 
+</div>
+<br>
+
+<b id="show_avail1"></b>
+<b id="show_avail2"></b>
+
+
+<br>
+<footer>
+  <ol>Posted by: Kevin Hill</ol>
+  <ol>*All equations are referenced from Alternative Energy Systems and Applications</ol>
+  <ol>Hodge, B. K. (2017). Alternative energy systems and applications. Chichester, West Sussex: Wiley Blackwell.</ol>
+</footer>
+</html>
